@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+body {
+  background-color: lightslategray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: whitesmoke;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  /* An element with position: relative; is positioned relative to its normal position. */
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  height: 350px;
+  width: 350px;
+  margin: 15px;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+  transform-style: preserve-3d;
+  transition: 500ms;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  top: -3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .card-front,
+.card .card-back {
+  /* positioned relative to the nearest positioned ancestor  */
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  left: 0;
+}
+
+.card .card-back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-options {
+  margin-top: 5rem;
+}
+
+.flashcard-option {
+  margin-top: .25rem;
+  color: #555555;
+  font-size: 1rem;
 }
