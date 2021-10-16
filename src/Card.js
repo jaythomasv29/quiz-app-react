@@ -3,6 +3,11 @@ import './Card.css'
 function Card({ question, answer, options }) {
   // flip card state set to front question side
   const [flip, setFlip] = useState(false)
+  function decodeString(str) {
+    const textArea = document.createElement('textarea')
+    textArea.innerHTML = str
+    return textArea.value
+  }
   return (
     // on click handler
     <div
@@ -11,7 +16,7 @@ function Card({ question, answer, options }) {
       onClick={() => setFlip(!flip)}>
 
       <div className="card-front">
-        <h3>{question}</h3>
+        <h3>{decodeString(question)}</h3>
         <div className="flashcard-options">
           <div className="flashcard-option">
           {options.map((option, index) => (

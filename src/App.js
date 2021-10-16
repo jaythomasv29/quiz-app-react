@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css';
 import CardList from './CardList';
+import Header from './Header'
 
 function App() {
   // const SAMPLE_FLASHCARDS = [
@@ -122,7 +123,8 @@ function App() {
     }
   }, [])
   return (
-    <div className="app">
+    <div className="container">
+      <Header />
     <CardList flashcards={flashcards}/>
     </div>
   );
