@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  background-color: white;
+  border-radius: 7px;
+  height: 280px;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+.form-group {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.form-group > label {
+  color: lightslategray;
+  font-family: arial;
+}
+
+.btn {
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+  background-color: darkgreen;
+}
+

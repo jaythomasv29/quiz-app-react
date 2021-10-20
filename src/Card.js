@@ -20,9 +20,9 @@ function Card({ question, answer, options }) {
         <div className="flashcard-options">
           <div className="flashcard-option">
           {options.map((option, index) => (
-              <p>{option}</p>
+              <p key={index}>{option}</p>
               ))}
-          <p>{answer}</p>
+              <p>{answer}</p>
           </div>
         </div>
       </div>
