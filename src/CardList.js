@@ -2,7 +2,6 @@ import React from 'react'
 import Card from './Card'
 import './CardList.css'
 function CardList({flashcards}) {
-  console.log(flashcards)
   if(flashcards){
 
     return (

@@ -8,6 +8,7 @@ function App() {
   const initialForm = { category: '13', totalQues: '10' }
 
   const [form, setForm] = useState(initialForm)
+
   const fetchData = async () => {
     const response = await fetch(`https://opentdb.com/api.php?amount=${form.totalQues}&category=${form.category}`)
     const data = await response.json()
@@ -18,16 +19,12 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     fetchData()
-
   }
 
   useEffect(() => {
     // new inst of abortController
-
     //function to fetch data from api
-
     fetchData()
-
   }, [])
   return (
     <div className="container">

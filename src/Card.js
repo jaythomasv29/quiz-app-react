@@ -8,6 +8,11 @@ function Card({ question, answer, options }) {
     textArea.innerHTML = str
     return textArea.value
   }
+options = [...options, answer]  // combine incorrect, and correct answers for rendering
+
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
   return (
     // on click handler
     <div
@@ -22,7 +27,7 @@ function Card({ question, answer, options }) {
           {options.map((option, index) => (
               <p key={index}>{option}</p>
               ))}
-              <p>{answer}</p>
+              
           </div>
         </div>
       </div>
