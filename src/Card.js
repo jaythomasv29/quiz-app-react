@@ -24,7 +24,7 @@ options = [...options, answer]  // combine incorrect, and correct answers for re
         <h3>{decodeString(question)}</h3>
         <div className="flashcard-options">
           <div className="flashcard-option">
-          {options.map((option, index) => (
+          {shuffle(options).map((option, index) => (
               <p key={index}>{option}</p>
               ))}
               
