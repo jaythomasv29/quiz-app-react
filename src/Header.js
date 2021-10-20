@@ -23,7 +23,7 @@ function Header({form, setForm, handleSubmit}) {
   return (
     <div>
       <form className="header" onSubmit={handleSubmit}>
-      <h1>Quiz Generator</h1>
+      <h1>Quiz Flip</h1>
         <div className="form-group">
           <label htmlFor="category">Category</label>  
           <select name="category" onChange={handleInputChange}>
