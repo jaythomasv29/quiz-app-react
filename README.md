@@ -4,7 +4,7 @@
 ## Project Details: 
 
 ### Thinking in React Components
-![mockup](.mockups/flashcard-mockup.png)
+![mockup](./mockups/flashcard-mockup.png)
   * The header would be a form that would allow for the user to select
   * Dynamic loading of categories from `www.opentdb.com` api using `useEffect()` and `fetch()` API
   * Async await function would be called to handle this asyncronous api call
